@@ -3,4 +3,6 @@ from .models import Poat
 
 # Register your models here.
 
+#teste git
+
 admin.site.register(Poat)
