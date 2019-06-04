@@ -1,26 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Blog Django Girls</title>
-</head>
-<body>
+{% extends 'blog/base.html' %}
 
-<div>
-    <h1><a href="/">Blog Django</a></h1>
-</div>
+{% block content %}
 
-<div>
-    <p>Publicado: 14.06.2014</p>
-    <h2><a href="">Meu primeiro Post</a></h2>
-    <p> Este é o conteudo do meu post</p>
-</div>
+    {% for poat in posts %}
+    <div class="'poat">
+        <div class="date">
+            <p>published: {{poat.published_date}}</p>
+        </div>
+        <h1><a href="{% url 'poat_detail' pk=poat.pk %}"> {{poat.title}}</a> </h1>
+        <p>{{poat.text}} </p>
+    </div>
+    {% endfor %}
 
-<div>
-     <p>Publicado: 16.06.2014</p>
-    <h2><a href="">Meu segundo Post</a></h2>
-    <p> Este é o conteudo do meu post</p>
-</div>
-
-</body>
-</html>
+{% endblock %}
