@@ -8,6 +8,7 @@
                 {{poat.published_date}}
             </div>
             {% endif %}
+        <a href="{% url 'poat_edit' pk=poat.pk %}"><apan class="'glyphicon gliphicon-pencil">Editar</apan></a>
             <h1> {{ poat.title }} </h1>
             <p> {{ poat.text }} </p>
     </div>
