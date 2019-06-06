@@ -43,3 +43,4 @@ def poat_edit(request, pk):
     else:
         form = PoatForm(instance=poat)
     return render(request, 'blog/post_edit.html', {'form': form})
+

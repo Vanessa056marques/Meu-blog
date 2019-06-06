@@ -5,3 +5,5 @@ from .models import Poat
 
 
 admin.site.register(Poat)
+
+
